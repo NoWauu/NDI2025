@@ -1,38 +1,37 @@
 /**
- * AI Adapter - Interface pour le moteur d'IA (LLM)
+ * AI Adapter - Interface pour le moteur d'IA (Backend API)
  *
- * PHASE 1 : Ce fichier contient uniquement des stubs (fonctions vides)
- * PHASE 2 : Téo implémentera la vraie logique avec Transformer.js + TinyLLaMA
- *
- * Ce module gère :
- * - Chargement du modèle LLM (TinyLLaMA 1.1B quantized)
- * - Génération de réponses via Transformer.js
- * - Gestion du statut du modèle (chargement, erreurs)
+ * Ce module communique avec le backend IA via HTTP.
+ * En Phase 1, le backend retourne le prompt construit.
+ * En Phase 2, le backend intégrera un vrai LLM.
  *
  * @module engine/ai-adapter
  */
 
 /**
- * État actuel du modèle IA
+ * URL de l'API backend
+ */
+const API_URL = 'http://localhost:4000/api/chat';
+
+/**
+ * État actuel du backend IA
  * @type {Object}
  */
 const aiState = {
   ready: false,
   loading: false,
-  model: null,
-  error: null
+  model: 'backend-api',
+  error: null,
+  lastRequestSuccess: false
 };
 
 /**
- * Génère une réponse via le modèle d'IA
- *
- * PHASE 1 : Retourne null (pas implémenté)
- * PHASE 2 : Téo implémentera avec Transformer.js
+ * Génère une réponse via le backend IA
  *
  * @param {string} userMessage - Message de l'utilisateur
  * @param {Array<Object>} conversationHistory - Historique des messages (max 10 derniers)
  * @param {Object} context - Contexte additionnel (documents RAG en Phase 3)
- * @returns {Promise<Object|null>} Réponse générée ou null si non disponible
+ * @returns {Promise<Object|null>} Réponse générée ou null si erreur
  *
  * @example
  * const response = await generateResponse(
@@ -41,124 +40,133 @@ const aiState = {
  *   { documents: [...] }
  * );
  *
- * // Format de retour attendu (Phase 2) :
+ * // Format de retour :
  * {
  *   content: "Pour obtenir votre CNI...",
  *   confidence: 0.85,
  *   source: 'ai',
- *   metadata: {
- *     model: 'TinyLLaMA-1.1B-Q4',
- *     tokensGenerated: 120,
- *     generationTime: 3500
- *   }
+ *   metadata: { ... }
  * }
  */
 export async function generateResponse(userMessage, conversationHistory, context) {
-  // PHASE 1 : Stub - retourne null
-  console.log('[AI] generateResponse appelé (stub Phase 1 - retourne null)');
-  console.log('[AI] Message:', userMessage);
-  console.log('[AI] History length:', conversationHistory?.length || 0);
+  console.log('[AI Adapter] generateResponse appelé');
+  console.log('[AI Adapter] Message:', userMessage);
+  console.log('[AI Adapter] History length:', conversationHistory?.length || 0);
 
-  // Phase 2 : Téo implémentera ici :
-  // 1. Construire le prompt avec historique + context
-  // 2. Appeler Transformer.js pipeline
-  // 3. Générer tokens avec TinyLLaMA
-  // 4. Parser et retourner la réponse
+  try {
+    // Détection de la langue (simple heuristique pour Phase 1)
+    const language = detectLanguage(userMessage);
 
-  return null;
+    // Appel à l'API backend
+    const response = await fetch(API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: userMessage,
+        language: language,
+        history: conversationHistory || []
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
+    }
+
+    const data = await response.json();
+
+    // Marquer le backend comme prêt si l'appel réussit
+    aiState.ready = true;
+    aiState.lastRequestSuccess = true;
+    aiState.error = null;
+
+    console.log('[AI Adapter] Réponse reçue du backend');
+
+    // Retourner au format attendu par le frontend
+    return {
+      content: data.content,
+      confidence: data.confidence ?? 0.5,
+      source: 'ai',
+      metadata: data.metadata ?? {}
+    };
+  } catch (error) {
+    console.error('[AI Adapter] Erreur lors de l\'appel API:', error);
+    aiState.lastRequestSuccess = false;
+    aiState.error = error.message;
+    aiState.ready = false;
+
+    // Retourner null pour fallback vers rules-engine
+    return null;
+  }
 }
 
 /**
- * Vérifie si le modèle IA est prêt à générer des réponses
+ * Détecte la langue d'un message (heuristique simple)
+ * @param {string} message
+ * @returns {string} 'fr' ou 'ar'
+ */
+function detectLanguage(message) {
+  // Détection simple : si contient des caractères arabes, c'est de l'arabe
+  const arabicPattern = /[\u0600-\u06FF]/;
+  return arabicPattern.test(message) ? 'ar' : 'fr';
+}
+
+/**
+ * Vérifie si le backend IA est prêt à générer des réponses
  *
- * PHASE 1 : Retourne false
- * PHASE 2 : Retournera true une fois le modèle chargé
- *
- * @returns {boolean} True si le modèle est chargé et prêt
+ * @returns {boolean} True si le backend est accessible
  */
 export function isReady() {
-  // PHASE 1 : Toujours false
   return aiState.ready;
 }
 
 /**
- * Obtient le statut détaillé du modèle IA
+ * Obtient le statut détaillé du backend IA
  *
  * @returns {Object} Statut avec ready, loading, model, error
- *
- * @example
- * const status = getStatus();
- * // Phase 1 : { ready: false, loading: false, model: null, error: null }
- * // Phase 2 (chargé) : { ready: true, loading: false, model: 'TinyLLaMA-1.1B', error: null }
- * // Phase 2 (en chargement) : { ready: false, loading: true, model: null, error: null }
- * // Phase 2 (erreur) : { ready: false, loading: false, model: null, error: 'Description erreur' }
  */
 export function getStatus() {
   return {
     ready: aiState.ready,
     loading: aiState.loading,
     model: aiState.model,
-    error: aiState.error
+    error: aiState.error,
+    lastRequestSuccess: aiState.lastRequestSuccess
   };
 }
 
 /**
- * Initialise et charge le modèle IA
+ * Initialise la connexion au backend IA
  *
- * PHASE 1 : Ne fait rien
- * PHASE 2 : Téo implémentera le chargement de TinyLLaMA via Transformer.js
- *
- * @param {Object} [config] - Configuration optionnelle du modèle
- * @param {string} [config.modelName='TinyLlama/TinyLlama-1.1B-Chat-v1.0'] - Nom du modèle HuggingFace
- * @param {string} [config.quantization='q4'] - Type de quantization (q4, q8, fp16)
- * @param {Function} [config.onProgress] - Callback de progression du téléchargement
+ * @param {Object} [config] - Configuration optionnelle
  * @returns {Promise<void>}
- *
- * @example
- * await initAI({
- *   modelName: 'TinyLlama/TinyLlama-1.1B-Chat-v1.0',
- *   quantization: 'q4',
- *   onProgress: (progress) => console.log(`Chargement: ${progress}%`)
- * });
  */
 export async function initAI(config = {}) {
-  console.log('[AI] initAI appelé (stub Phase 1 - ne fait rien)');
-  console.log('[AI] Config:', config);
+  console.log('[AI Adapter] Initialisation de la connexion au backend...');
 
-  // Phase 2 : Téo implémentera ici :
-  // 1. Mettre aiState.loading = true
-  // 2. Charger Transformer.js pipeline
-  // 3. Télécharger + charger TinyLLaMA quantized
-  // 4. Mettre aiState.ready = true, aiState.model = 'TinyLLaMA-1.1B'
-  // 5. Gérer les erreurs dans aiState.error
-
-  // Exemple structure Phase 2 :
-  /*
   try {
     aiState.loading = true;
     aiState.error = null;
 
-    // Import dynamique de Transformer.js
-    const { pipeline } = await import('@xenova/transformers');
-
-    // Charger le modèle
-    const generator = await pipeline('text-generation', config.modelName, {
-      quantized: true,
-      progress_callback: config.onProgress
+    // Ping du backend pour vérifier qu'il est accessible
+    const response = await fetch('http://localhost:4000/api/status', {
+      method: 'GET'
     });
 
-    aiState.model = generator;
-    aiState.ready = true;
-    aiState.loading = false;
-
-    console.log('[AI] Modèle chargé avec succès');
+    if (response.ok) {
+      aiState.ready = true;
+      aiState.loading = false;
+      console.log('[AI Adapter] Backend accessible');
+    } else {
+      throw new Error('Backend non accessible');
+    }
   } catch (error) {
-    console.error('[AI] Erreur chargement modèle:', error);
+    console.error('[AI Adapter] Erreur connexion backend:', error);
     aiState.error = error.message;
     aiState.loading = false;
     aiState.ready = false;
   }
-  */
 }
 
 /**
