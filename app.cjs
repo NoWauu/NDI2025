@@ -1,4 +1,4 @@
-const { buildPrompt } = require('./ia/prompting');
+const { buildPrompt } = require('./ia/prompting.cjs');
 // const { selectRagContext } = require('./ia/rag_pipeline'); // Sera utilisé en Phase 3
 
 /**
