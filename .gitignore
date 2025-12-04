@@ -1,12 +1,35 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
+# Dependencies
+node_modules/
+package-lock.json
+
+# Production builds
 dist/
-wheels/
-*.egg-info
+build/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
 
 # Virtual environments
 .venv
 
 node_modules/
+# Temporary files
+*.tmp
+.cache/

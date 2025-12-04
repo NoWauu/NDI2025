@@ -1,0 +1,124 @@
+{
+  "faq": [
+    {
+      "id": "admin-01",
+      "keywords": ["carte", "identité", "cni", "national", "document"],
+      "question_fr": "Comment obtenir une carte d'identité nationale ?",
+      "answer_fr": "Pour obtenir une carte d'identité nationale (CNI) en Mauritanie, rendez-vous au bureau d'état civil de votre commune avec : 1) Un extrait d'acte de naissance, 2) Deux photos d'identité récentes, 3) Un certificat de résidence. Les frais sont de 1000 MRU et le délai de traitement est d'environ 2 semaines.",
+      "category": "administration",
+      "priority": 10
+    },
+    {
+      "id": "admin-02",
+      "keywords": ["passeport", "voyage", "visa", "international"],
+      "question_fr": "Comment faire une demande de passeport ?",
+      "answer_fr": "Pour obtenir un passeport mauritanien, présentez-vous à la Direction Générale de la Sûreté Nationale avec : votre CNI, un extrait de naissance, 4 photos d'identité, un certificat de résidence et le paiement des frais (5000 MRU pour passeport ordinaire). Le délai est de 3 à 4 semaines.",
+      "category": "administration",
+      "priority": 9
+    },
+    {
+      "id": "admin-03",
+      "keywords": ["naissance", "acte", "bébé", "déclaration", "état civil"],
+      "question_fr": "Comment déclarer une naissance ?",
+      "answer_fr": "La déclaration de naissance doit être faite dans les 30 jours à l'état civil de la commune. Documents requis : certificat médical de naissance, carte d'identité des parents, certificat de mariage. La procédure est gratuite et l'extrait d'acte de naissance est délivré immédiatement.",
+      "category": "administration",
+      "priority": 8
+    },
+    {
+      "id": "sante-01",
+      "keywords": ["hôpital", "santé", "médecin", "consultation", "soins"],
+      "question_fr": "Comment accéder aux services de santé publics ?",
+      "answer_fr": "Les centres de santé publics sont accessibles sur présentation de votre CNI. Les consultations coûtent entre 500 et 1000 MRU. Pour les urgences, rendez-vous à l'hôpital régional le plus proche. Les enfants de moins de 5 ans et les femmes enceintes bénéficient de soins gratuits.",
+      "category": "sante",
+      "priority": 10
+    },
+    {
+      "id": "sante-02",
+      "keywords": ["vaccination", "vaccin", "enfant", "immunisation", "carnet"],
+      "question_fr": "Où faire vacciner mon enfant ?",
+      "answer_fr": "Les vaccinations infantiles sont gratuites dans tous les centres de santé communautaires. Présentez-vous avec le carnet de santé de l'enfant. Le calendrier vaccinal comprend : BCG, Polio, DTC, Hépatite B et Rougeole. Les séances de vaccination ont lieu les mardis et jeudis.",
+      "category": "sante",
+      "priority": 9
+    },
+    {
+      "id": "education-01",
+      "keywords": ["école", "inscription", "scolarité", "rentrée", "élève"],
+      "question_fr": "Comment inscrire mon enfant à l'école ?",
+      "answer_fr": "Pour inscrire un enfant à l'école publique, présentez-vous au directeur de l'établissement avec : l'extrait de naissance, le carnet de vaccination à jour, un certificat de résidence et une photo d'identité. L'inscription est gratuite et se fait en juillet-août pour la rentrée de septembre.",
+      "category": "education",
+      "priority": 10
+    },
+    {
+      "id": "education-02",
+      "keywords": ["bourse", "étudiant", "université", "aide financière", "études"],
+      "question_fr": "Comment obtenir une bourse d'études ?",
+      "answer_fr": "Les demandes de bourses nationales se font auprès du Ministère de l'Enseignement Supérieur en septembre-octobre. Conditions : résultats scolaires excellents (moyenne > 12/20), situation sociale modeste. Dossier requis : relevés de notes, attestation d'inscription universitaire, justificatif de revenus des parents.",
+      "category": "education",
+      "priority": 8
+    },
+    {
+      "id": "emploi-01",
+      "keywords": ["travail", "emploi", "job", "chercher", "chômage"],
+      "question_fr": "Comment chercher un emploi en Mauritanie ?",
+      "answer_fr": "Inscrivez-vous à l'Agence Nationale pour la Promotion de l'Emploi des Jeunes (ANAPEJ) avec votre CV, CNI et diplômes. L'ANAPEJ propose : offres d'emploi, formations professionnelles, aide à la création d'entreprise. Consultez aussi les sites emploi-mauritanie.com et anapej.mr.",
+      "category": "emploi",
+      "priority": 9
+    },
+    {
+      "id": "emploi-02",
+      "keywords": ["formation", "apprentissage", "métier", "compétence", "qualification"],
+      "question_fr": "Quelles formations professionnelles sont disponibles ?",
+      "answer_fr": "Les Centres de Formation Professionnelle (CFP) proposent des formations gratuites ou à coût réduit dans : mécanique, électricité, couture, informatique, cuisine, maçonnerie. Durée : 6 mois à 2 ans. Inscription avec CNI et niveau scolaire minimum (classe de 3ème).",
+      "category": "emploi",
+      "priority": 7
+    },
+    {
+      "id": "transport-01",
+      "keywords": ["permis", "conduire", "voiture", "examen", "auto-école"],
+      "question_fr": "Comment obtenir un permis de conduire ?",
+      "answer_fr": "Pour obtenir un permis de conduire : 1) Inscrivez-vous dans une auto-école agréée, 2) Suivez 20 heures de formation théorique et 30 heures de pratique, 3) Passez l'examen du code puis l'examen de conduite. Coût total : environ 50 000 MRU. Age minimum : 18 ans.",
+      "category": "transport",
+      "priority": 8
+    },
+    {
+      "id": "transport-02",
+      "keywords": ["bus", "transport", "commun", "déplacement", "tarif"],
+      "question_fr": "Quels sont les transports publics disponibles ?",
+      "answer_fr": "À Nouakchott, les transports publics incluent : bus SOMAGAZ (tarif 50 MRU), taxis collectifs (100-200 MRU selon distance), minibus de quartier. Horaires : 6h-22h. Des applications mobiles comme 'Taxiway' permettent de réserver des taxis.",
+      "category": "transport",
+      "priority": 6
+    },
+    {
+      "id": "logement-01",
+      "keywords": ["logement", "maison", "appartement", "loyer", "habitation"],
+      "question_fr": "Comment trouver un logement social ?",
+      "answer_fr": "Pour accéder aux logements sociaux, adressez-vous à la Société Nationale Immobilière (SNI). Critères : revenus modestes, résidence en Mauritanie depuis 5 ans minimum, absence de propriété. Dossier : CNI, attestation de revenus, certificat de résidence, livret de famille. Loyers : 15 000 à 40 000 MRU/mois.",
+      "category": "logement",
+      "priority": 7
+    },
+    {
+      "id": "juridique-01",
+      "keywords": ["justice", "tribunal", "avocat", "plainte", "droit"],
+      "question_fr": "Comment porter plainte ou accéder à la justice ?",
+      "answer_fr": "Pour porter plainte, rendez-vous au commissariat le plus proche ou directement au tribunal. Pour une aide juridique gratuite, contactez l'Association Mauritanienne des Droits de l'Homme. Les audiences sont publiques. Apportez toutes preuves et pièces d'identité. Un avocat peut être commis d'office si vous n'avez pas les moyens.",
+      "category": "juridique",
+      "priority": 8
+    },
+    {
+      "id": "social-01",
+      "keywords": ["aide", "pauvre", "allocation", "social", "assistance"],
+      "question_fr": "Quelles aides sociales existent pour les familles en difficulté ?",
+      "answer_fr": "Les programmes d'aide sociale incluent : 1) Le registre social (Taazour) pour allocations mensuelles, 2) Cantines scolaires gratuites, 3) Aides alimentaires d'urgence via le Commissariat à la Sécurité Alimentaire. Inscrivez-vous auprès du centre social de votre commune avec justificatifs de revenus.",
+      "category": "social",
+      "priority": 9
+    },
+    {
+      "id": "entreprise-01",
+      "keywords": ["entreprise", "business", "créer", "société", "commerce"],
+      "question_fr": "Comment créer une entreprise en Mauritanie ?",
+      "answer_fr": "Étapes pour créer une entreprise : 1) Enregistrement à l'Agence de Promotion des Investissements (API), 2) Obtenir registre de commerce, 3) Immatriculation fiscale, 4) Affiliation à la CNSS. Délai : 48 heures via le guichet unique de l'API. Coût minimum : 25 000 MRU. Des formations entrepreneuriales gratuites sont proposées par l'ANAPEJ.",
+      "category": "entreprise",
+      "priority": 7
+    }
+  ]
+}

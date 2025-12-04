@@ -1,0 +1,19 @@
+{
+  "name": "ndi2025-chatbot-mauritanie",
+  "version": "1.0.0",
+  "description": "Chatbot IA légère pour services publics mauritaniens - Nuit de l'Info 2025",
+  "type": "module",
+  "scripts": {
+    "dev": "npx serve . -p 3000 --cors",
+    "start": "npx serve . -p 3000 --cors"
+  },
+  "keywords": ["chatbot", "ia", "mauritanie", "services-publics", "offline-first"],
+  "author": "Équipe NDI2025",
+  "license": "MIT",
+  "dependencies": {
+    "dexie": "^4.0.11"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
