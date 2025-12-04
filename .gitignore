@@ -26,6 +26,10 @@ logs/
 *.log
 npm-debug.log*
 
+# Virtual environments
+.venv
+
+node_modules/
 # Temporary files
 *.tmp
 .cache/

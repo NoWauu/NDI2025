@@ -1,0 +1,16 @@
+[
+  {
+    "id": "doc_001",
+    "title": "Carte d'identité nationale",
+    "lang": "fr",
+    "tags": ["identité", "cni", "etat_civil"],
+    "body": "La Carte Nationale d'Identité (CNI) est un document officiel certifiant l'identité de son titulaire. Pour l'obtenir, il faut se présenter au centre d'enrôlement avec un extrait de naissance et le certificat de nationalité."
+  },
+  {
+    "id": "doc_002",
+    "title": "Passeport Biométrique",
+    "lang": "fr",
+    "tags": ["voyage", "passeport", "etat_civil"],
+    "body": "Le passeport biométrique est nécessaire pour voyager à l'étranger. Les pièces requises incluent la CNI, un extrait de naissance, et le paiement de la quittance au trésor public."
+  }
+]
