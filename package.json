@@ -4,8 +4,8 @@
   "description": "Chatbot IA légère pour services publics mauritaniens - Nuit de l'Info 2025",
   "type": "module",
   "scripts": {
-    "dev": "npx serve public -p 3000",
-    "start": "npx serve public -p 3000"
+    "dev": "npx serve . -p 3000 --cors",
+    "start": "npx serve . -p 3000 --cors"
   },
   "keywords": ["chatbot", "ia", "mauritanie", "services-publics", "offline-first"],
   "author": "Équipe NDI2025",
