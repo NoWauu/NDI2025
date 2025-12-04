@@ -1,0 +1,16 @@
+[
+  {
+    "id": "faq_001",
+    "question": "Comment obtenir ma carte d'identité ?",
+    "answer": "Vous devez vous rendre au centre d'enrôlement le plus proche muni de votre extrait de naissance et de votre certificat de nationalité.",
+    "tags": ["identité", "cni"],
+    "category": "etat_civil"
+  },
+  {
+    "id": "faq_002",
+    "question": "Quel est le coût du passeport ?",
+    "answer": "Le coût varie selon le type de passeport (30 000 MRU pour le passeport ordinaire).",
+    "tags": ["passeport", "coût"],
+    "category": "voyage"
+  }
+]
