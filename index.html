@@ -23,6 +23,21 @@
 
     <!-- Container principal -->
     <main class="chat-container">
+        <!-- Indicateur de chargement du modèle -->
+        <div class="model-loading" id="model-loading" style="display: none;" role="status" aria-live="polite">
+            <div class="loading-content">
+                <div class="loading-spinner"></div>
+                <div class="loading-text">
+                    <p class="loading-title">Chargement du modèle IA...</p>
+                    <div class="loading-progress-bar">
+                        <div class="loading-progress-fill" id="model-progress-fill" style="width: 0%"></div>
+                    </div>
+                    <p class="loading-percentage" id="model-progress-text">0%</p>
+                    <p class="loading-subtitle">Cela peut prendre 1-2 minutes lors du premier chargement</p>
+                </div>
+            </div>
+        </div>
+
         <!-- Zone d'affichage des messages -->
         <div class="messages-wrapper" id="messages-wrapper" role="log" aria-live="polite" aria-atomic="false">
             <div class="messages-container" id="messages-container">

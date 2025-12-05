@@ -62,17 +62,47 @@ async function init() {
     if (CONFIG.ENABLE_AI) {
       console.log('[App] Initialisation du modèle IA...');
       UI.updateStatusBadge('loading');
+      UI.showModelLoading();
+      UI.setInputDisabled(true);
+
+      // Démarrer le polling pour suivre la progression
+      const progressInterval = setInterval(() => {
+        const status = getStatus();
+        if (status.loadProgress !== undefined) {
+          UI.updateModelLoadingProgress(status.loadProgress);
+        }
+
+        // Arrêter le polling si le chargement est terminé ou en erreur
+        if (status.ready || status.error) {
+          clearInterval(progressInterval);
+          UI.hideModelLoading();
+          UI.setInputDisabled(false);
+          updateAIStatus();
+        }
+      }, 200); // Polling toutes les 200ms
 
       try {
-        await initAI({
-          onProgress: (progress) => {
-            console.log(`[App] Chargement modèle : ${progress}%`);
-          }
-        });
+        await initAI();
+
+        // Mise à jour finale
+        clearInterval(progressInterval);
+        UI.hideModelLoading();
+        UI.setInputDisabled(false);
         updateAIStatus();
+
+        const finalStatus = getStatus();
+        if (finalStatus.useLocalLLM) {
+          console.log('[App] ✅ Modèle local chargé avec succès');
+        } else {
+          console.log('[App] Mode backend activé (modèle local non disponible)');
+        }
       } catch (error) {
         console.error('[App] Erreur chargement IA:', error);
+        clearInterval(progressInterval);
+        UI.hideModelLoading();
+        UI.setInputDisabled(false);
         UI.showError('Le modèle IA n\'a pas pu être chargé. Mode hors ligne activé.');
+        UI.updateStatusBadge('offline');
       }
     } else {
       // Phase 1 : IA désactivée
@@ -110,8 +140,9 @@ async function handleUserMessage(text) {
     UI.addMessage(userMsg);
     await saveMessage(userMsg);
 
-    // 2. Afficher l'indicateur de saisie
+    // 2. Afficher l'indicateur de saisie et désactiver l'input
     UI.showTypingIndicator();
+    UI.setInputDisabled(true);
 
     // 3. Tenter génération via IA (si disponible)
     let response = null;
@@ -138,8 +169,9 @@ async function handleUserMessage(text) {
       response = findAnswer(text);
     }
 
-    // 5. Cacher l'indicateur de saisie
+    // 5. Cacher l'indicateur de saisie et réactiver l'input
     UI.hideTypingIndicator();
+    UI.setInputDisabled(false);
 
     // 6. Afficher et sauvegarder la réponse
     const assistantMsg = {
@@ -157,6 +189,7 @@ async function handleUserMessage(text) {
   } catch (error) {
     console.error('[App] Erreur traitement message:', error);
     UI.hideTypingIndicator();
+    UI.setInputDisabled(false);
     UI.showError('Une erreur est survenue lors du traitement de votre message.');
   }
 }

@@ -1,130 +1,373 @@
 /**
- * AI Adapter - Interface pour le moteur d'IA (Backend API)
+ * AI Adapter - Interface pour le moteur d'IA Local (Phase 2)
  *
- * Ce module communique avec le backend IA via HTTP.
- * En Phase 1, le backend retourne le prompt construit.
- * En Phase 2, le backend intégrera un vrai LLM.
+ * Intégration de TinyLLaMA via Transformer.js pour génération locale
+ * avec fallback backend intelligent.
  *
  * @module engine/ai-adapter
  */
 
 /**
- * URL de l'API backend
+ * Configuration
  */
-const API_URL = 'http://localhost:4000/api/chat';
+const CONFIG = {
+  // URLs
+  BACKEND_CHAT_URL: 'http://localhost:4000/api/chat',
+  BACKEND_FALLBACK_URL: 'http://localhost:4000/ai/fallback',
+  BACKEND_MODEL_INFO_URL: 'http://localhost:4000/ai/model-info',
+
+  // Modèle
+  MODEL_ID: 'Xenova/TinyLlama-1.1B-Chat-v1.0',
+
+  // Timeouts
+  MODEL_LOAD_TIMEOUT: 120000, // 2 minutes
+  GENERATION_TIMEOUT: 15000,   // 15 secondes
+
+  // Seuils
+  MIN_CONFIDENCE: 0.5,
+
+  // Paramètres génération
+  GENERATION_PARAMS: {
+    max_new_tokens: 150,
+    temperature: 0.7,
+    top_k: 50,
+    top_p: 0.9,
+    do_sample: true,
+    repetition_penalty: 1.1
+  }
+};
 
 /**
- * État actuel du backend IA
- * @type {Object}
+ * État de l'IA
  */
 const aiState = {
   ready: false,
   loading: false,
-  model: 'backend-api',
+  model: null,
+  pipeline: null,
   error: null,
-  lastRequestSuccess: false
+  loadProgress: 0,
+  useLocalLLM: false, // Mode hybride : local ou backend
+  stats: {
+    totalGenerations: 0,
+    successfulGenerations: 0,
+    failedGenerations: 0,
+    avgGenerationTime: 0,
+    fallbackCount: 0
+  }
 };
 
 /**
- * Génère une réponse via le backend IA
- *
- * @param {string} userMessage - Message de l'utilisateur
- * @param {Array<Object>} conversationHistory - Historique des messages (max 10 derniers)
- * @param {Object} context - Contexte additionnel (documents RAG en Phase 3)
- * @returns {Promise<Object|null>} Réponse générée ou null si erreur
- *
- * @example
- * const response = await generateResponse(
- *   "Comment obtenir une CNI ?",
- *   [{ role: 'user', content: '...' }, { role: 'assistant', content: '...' }],
- *   { documents: [...] }
- * );
- *
- * // Format de retour :
- * {
- *   content: "Pour obtenir votre CNI...",
- *   confidence: 0.85,
- *   source: 'ai',
- *   metadata: { ... }
- * }
- */
-export async function generateResponse(userMessage, conversationHistory, context) {
-  console.log('[AI Adapter] generateResponse appelé');
-  console.log('[AI Adapter] Message:', userMessage);
-  console.log('[AI Adapter] History length:', conversationHistory?.length || 0);
-
-  try {
-    // Détection de la langue (simple heuristique pour Phase 1)
-    const language = detectLanguage(userMessage);
-
-    // Appel à l'API backend
-    const response = await fetch(API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        message: userMessage,
-        language: language,
-        history: conversationHistory || []
-      })
-    });
-
-    if (!response.ok) {
-      throw new Error(`API error: ${response.status} ${response.statusText}`);
-    }
-
-    const data = await response.json();
-
-    // Marquer le backend comme prêt si l'appel réussit
-    aiState.ready = true;
-    aiState.lastRequestSuccess = true;
-    aiState.error = null;
-
-    console.log('[AI Adapter] Réponse reçue du backend');
-
-    // Retourner au format attendu par le frontend
-    return {
-      content: data.content,
-      confidence: data.confidence ?? 0.5,
-      source: 'ai',
-      metadata: data.metadata ?? {}
-    };
-  } catch (error) {
-    console.error('[AI Adapter] Erreur lors de l\'appel API:', error);
-    aiState.lastRequestSuccess = false;
-    aiState.error = error.message;
-    aiState.ready = false;
-
-    // Retourner null pour fallback vers rules-engine
-    return null;
-  }
-}
-
-/**
- * Détecte la langue d'un message (heuristique simple)
- * @param {string} message
- * @returns {string} 'fr' ou 'ar'
+ * Détecte la langue d'un message
  */
 function detectLanguage(message) {
-  // Détection simple : si contient des caractères arabes, c'est de l'arabe
   const arabicPattern = /[\u0600-\u06FF]/;
   return arabicPattern.test(message) ? 'ar' : 'fr';
 }
 
 /**
- * Vérifie si le backend IA est prêt à générer des réponses
- *
- * @returns {boolean} True si le backend est accessible
+ * Construit le prompt pour TinyLLaMA
+ */
+function buildPrompt(userMessage, language, conversationHistory = []) {
+  const systemPrompts = {
+    fr: "Tu es un assistant virtuel pour les services publics mauritaniens. Tu réponds de manière claire, concise et professionnelle en français. Si tu ne sais pas, dis-le honnêtement.",
+    ar: "أنت مساعد افتراضي للخدمات العامة الموريتانية. تجيب بوضوح وإيجاز واحترافية باللغة العربية. إذا كنت لا تعرف، قل ذلك بصراحة."
+  };
+
+  const systemPrompt = systemPrompts[language] || systemPrompts.fr;
+
+  // Format pour TinyLlama Chat
+  let prompt = `<|system|>\n${systemPrompt}</s>\n`;
+
+  // Ajouter l'historique (max 3 derniers échanges)
+  const recentHistory = conversationHistory.slice(-6); // 3 paires user/assistant
+  for (const msg of recentHistory) {
+    if (msg.role === 'user') {
+      prompt += `<|user|>\n${msg.content}</s>\n`;
+    } else if (msg.role === 'assistant') {
+      prompt += `<|assistant|>\n${msg.content}</s>\n`;
+    }
+  }
+
+  // Ajouter le message actuel
+  prompt += `<|user|>\n${userMessage}</s>\n<|assistant|>\n`;
+
+  return prompt;
+}
+
+/**
+ * Initialise le modèle LLM local
+ */
+export async function initAI(config = {}) {
+  console.log('[AI Adapter] Initialisation du LLM local...');
+
+  // Vérifier si on peut charger le modèle local
+  if (!window.crossOriginIsolated) {
+    console.warn('[AI Adapter] ATTENTION: crossOriginIsolated=false. Le LLM local ne fonctionnera peut-être pas optimalement.');
+    console.warn('[AI Adapter] Utilisation du mode backend uniquement.');
+    aiState.useLocalLLM = false;
+    aiState.ready = true;
+    aiState.model = 'backend-only';
+    return;
+  }
+
+  try {
+    aiState.loading = true;
+    aiState.loadProgress = 0;
+    aiState.error = null;
+
+    console.log('[AI Adapter] Chargement de Transformer.js...');
+
+    // Import dynamique de Transformer.js
+    const { pipeline, env } = await import('@xenova/transformers');
+
+    // Configuration
+    env.allowLocalModels = false;
+    env.allowRemoteModels = true;
+
+    console.log(`[AI Adapter] Téléchargement du modèle ${CONFIG.MODEL_ID}...`);
+    console.log('[AI Adapter] Cela peut prendre 1-2 minutes...');
+
+    // Callback de progression
+    const progressCallback = (progress) => {
+      if (progress.status === 'progress') {
+        const percent = Math.round((progress.loaded / progress.total) * 100);
+        aiState.loadProgress = percent;
+        console.log(`[AI Adapter] Chargement: ${percent}%`);
+      }
+    };
+
+    // Timeout pour le chargement
+    const loadPromise = pipeline(
+      'text-generation',
+      CONFIG.MODEL_ID,
+      {
+        quantized: true,
+        progress_callback: progressCallback
+      }
+    );
+
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout chargement modèle')), CONFIG.MODEL_LOAD_TIMEOUT)
+    );
+
+    aiState.pipeline = await Promise.race([loadPromise, timeoutPromise]);
+
+    aiState.loading = false;
+    aiState.ready = true;
+    aiState.useLocalLLM = true;
+    aiState.model = CONFIG.MODEL_ID;
+    aiState.loadProgress = 100;
+
+    console.log('[AI Adapter] ✅ Modèle LLM chargé avec succès !');
+    console.log(`[AI Adapter] Mode: Local LLM (${CONFIG.MODEL_ID})`);
+
+  } catch (error) {
+    console.error('[AI Adapter] ❌ Erreur chargement modèle:', error);
+    console.log('[AI Adapter] Fallback: Utilisation du backend uniquement');
+
+    aiState.loading = false;
+    aiState.ready = true;
+    aiState.useLocalLLM = false;
+    aiState.model = 'backend-only';
+    aiState.error = error.message;
+  }
+}
+
+/**
+ * Génère une réponse avec le LLM local
+ */
+async function generateLocalLLM(prompt) {
+  if (!aiState.pipeline) {
+    throw new Error('Pipeline non initialisé');
+  }
+
+  const startTime = Date.now();
+
+  console.log('[AI Adapter] Génération locale en cours...');
+
+  try {
+    // Timeout pour la génération
+    const generatePromise = aiState.pipeline(prompt, {
+      ...CONFIG.GENERATION_PARAMS,
+      return_full_text: false
+    });
+
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => reject(new Error('Timeout génération')), CONFIG.GENERATION_TIMEOUT)
+    );
+
+    const result = await Promise.race([generatePromise, timeoutPromise]);
+
+    const generatedText = result[0].generated_text.trim();
+    const generationTime = Date.now() - startTime;
+
+    // Mise à jour stats
+    aiState.stats.totalGenerations++;
+    aiState.stats.successfulGenerations++;
+    aiState.stats.avgGenerationTime =
+      (aiState.stats.avgGenerationTime * (aiState.stats.totalGenerations - 1) + generationTime) /
+      aiState.stats.totalGenerations;
+
+    console.log(`[AI Adapter] ✅ Génération réussie (${generationTime}ms)`);
+
+    return {
+      content: generatedText,
+      confidence: 0.8, // Confidence élevée pour génération locale réussie
+      generationTime
+    };
+
+  } catch (error) {
+    aiState.stats.totalGenerations++;
+    aiState.stats.failedGenerations++;
+
+    console.error('[AI Adapter] ❌ Erreur génération locale:', error);
+    throw error;
+  }
+}
+
+/**
+ * Appelle le fallback backend
+ */
+async function callBackendFallback(userMessage, language, reason) {
+  console.log(`[AI Adapter] Fallback backend (raison: ${reason})...`);
+
+  aiState.stats.fallbackCount++;
+
+  try {
+    const response = await fetch(CONFIG.BACKEND_FALLBACK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: userMessage,
+        language,
+        reason
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error(`Backend fallback error: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+    console.log('[AI Adapter] ✅ Fallback backend réussi');
+
+    return {
+      content: data.content,
+      confidence: data.confidence,
+      source: 'fallback',
+      metadata: {
+        ...data.metadata,
+        fallbackReason: reason
+      }
+    };
+
+  } catch (error) {
+    console.error('[AI Adapter] ❌ Erreur fallback backend:', error);
+    throw error;
+  }
+}
+
+/**
+ * Génère une réponse (fonction principale)
+ */
+export async function generateResponse(userMessage, conversationHistory = [], context = {}) {
+  console.log('[AI Adapter] Génération de réponse...');
+  console.log('[AI Adapter] Message:', userMessage.substring(0, 50) + '...');
+
+  const language = detectLanguage(userMessage);
+
+  // Si le modèle local n'est pas disponible, utiliser directement le backend
+  if (!aiState.useLocalLLM || !aiState.pipeline) {
+    console.log('[AI Adapter] Mode backend uniquement');
+
+    try {
+      const response = await fetch(CONFIG.BACKEND_CHAT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message: userMessage,
+          language,
+          history: conversationHistory
+        })
+      });
+
+      if (!response.ok) {
+        throw new Error(`Backend error: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      return {
+        content: data.content,
+        confidence: data.confidence ?? 0.5,
+        source: 'backend',
+        metadata: data.metadata ?? {}
+      };
+
+    } catch (error) {
+      console.error('[AI Adapter] Erreur backend:', error);
+
+      // Dernier fallback
+      try {
+        return await callBackendFallback(userMessage, language, 'backend_error');
+      } catch (fallbackError) {
+        // Retourner null pour fallback rules-engine frontend
+        return null;
+      }
+    }
+  }
+
+  // Mode local LLM
+  try {
+    const prompt = buildPrompt(userMessage, language, conversationHistory);
+
+    const result = await generateLocalLLM(prompt);
+
+    // Vérifier la confiance
+    if (result.confidence < CONFIG.MIN_CONFIDENCE) {
+      console.log(`[AI Adapter] Confiance faible (${result.confidence}), fallback...`);
+      return await callBackendFallback(userMessage, language, 'low_confidence');
+    }
+
+    return {
+      content: result.content,
+      confidence: result.confidence,
+      source: 'local_llm',
+      metadata: {
+        language,
+        model: CONFIG.MODEL_ID,
+        generationTime: result.generationTime
+      }
+    };
+
+  } catch (error) {
+    console.error('[AI Adapter] Erreur génération:', error);
+
+    // Déterminer la raison du fallback
+    const reason = error.message.includes('Timeout') ? 'timeout' : 'error';
+
+    // Tenter le fallback backend
+    try {
+      return await callBackendFallback(userMessage, language, reason);
+    } catch (fallbackError) {
+      console.error('[AI Adapter] Fallback échoué également');
+      // Retourner null pour fallback rules-engine frontend
+      return null;
+    }
+  }
+}
+
+/**
+ * Vérifie si l'IA est prête
  */
 export function isReady() {
   return aiState.ready;
 }
 
 /**
- * Obtient le statut détaillé du backend IA
- *
- * @returns {Object} Statut avec ready, loading, model, error
+ * Obtient le statut de l'IA
  */
 export function getStatus() {
   return {
@@ -132,140 +375,39 @@ export function getStatus() {
     loading: aiState.loading,
     model: aiState.model,
     error: aiState.error,
-    lastRequestSuccess: aiState.lastRequestSuccess
+    loadProgress: aiState.loadProgress,
+    useLocalLLM: aiState.useLocalLLM,
+    stats: { ...aiState.stats }
   };
 }
 
 /**
- * Initialise la connexion au backend IA
- *
- * @param {Object} [config] - Configuration optionnelle
- * @returns {Promise<void>}
+ * Obtient les statistiques
  */
-export async function initAI(config = {}) {
-  console.log('[AI Adapter] Initialisation de la connexion au backend...');
-
-  try {
-    aiState.loading = true;
-    aiState.error = null;
-
-    // Ping du backend pour vérifier qu'il est accessible
-    const response = await fetch('http://localhost:4000/api/status', {
-      method: 'GET'
-    });
-
-    if (response.ok) {
-      aiState.ready = true;
-      aiState.loading = false;
-      console.log('[AI Adapter] Backend accessible');
-    } else {
-      throw new Error('Backend non accessible');
-    }
-  } catch (error) {
-    console.error('[AI Adapter] Erreur connexion backend:', error);
-    aiState.error = error.message;
-    aiState.loading = false;
-    aiState.ready = false;
-  }
+export function getAIStats() {
+  return {
+    ...aiState.stats,
+    modelSize: aiState.useLocalLLM ? '~500MB (Q4)' : 'N/A',
+    mode: aiState.useLocalLLM ? 'Local LLM' : 'Backend Only'
+  };
 }
 
 /**
- * Décharge le modèle de la mémoire
- *
- * PHASE 1 : Ne fait rien
- * PHASE 2 : Libère la mémoire GPU/CPU du modèle
- *
- * @returns {Promise<void>}
+ * Décharge le modèle
  */
 export async function unloadAI() {
-  console.log('[AI] unloadAI appelé (stub Phase 1)');
+  console.log('[AI Adapter] Déchargement du modèle...');
 
-  // Phase 2 : Téo implémentera :
-  // 1. Libérer les ressources du modèle
-  // 2. Reset aiState
-  /*
-  if (aiState.model) {
-    await aiState.model.dispose();
+  if (aiState.pipeline) {
+    // Transformer.js n'a pas de méthode dispose explicite
+    aiState.pipeline = null;
   }
 
   aiState.ready = false;
   aiState.loading = false;
   aiState.model = null;
   aiState.error = null;
-  */
+  aiState.useLocalLLM = false;
+
+  console.log('[AI Adapter] Modèle déchargé');
 }
-
-/**
- * Obtient des statistiques sur la génération IA
- *
- * PHASE 1 : Retourne des valeurs nulles
- * PHASE 2 : Retournera les vraies stats
- *
- * @returns {Object} Statistiques (tokens générés, temps moyen, etc.)
- */
-export function getAIStats() {
-  // Phase 1
-  return {
-    totalGenerations: 0,
-    totalTokensGenerated: 0,
-    averageGenerationTime: 0,
-    modelSize: null
-  };
-
-  // Phase 2 : Téo trackera les stats réelles
-}
-
-// ============================================
-// DOCUMENTATION POUR TÉO - PHASE 2
-// ============================================
-
-/**
- * NOTES POUR L'IMPLÉMENTATION PHASE 2 (Téo) :
- *
- * 1. DÉPENDANCES À INSTALLER :
- *    npm install @xenova/transformers
- *
- * 2. MODÈLE RECOMMANDÉ :
- *    - TinyLlama/TinyLlama-1.1B-Chat-v1.0 (quantized Q4)
- *    - Taille : ~300-500 MB
- *    - Alternative : Qwen/Qwen2.5-0.5B si TinyLlama trop gros
- *
- * 3. PROMPT TEMPLATE SUGGÉRÉ :
- *    ```
- *    <|system|>
- *    Tu es un assistant virtuel pour les services publics mauritaniens.
- *    Réponds de manière claire, concise et professionnelle en français.
- *    Si tu ne sais pas, dis-le honnêtement.
- *    </s>
- *    <|user|>
- *    ${userMessage}
- *    </s>
- *    <|assistant|>
- *    ```
- *
- * 4. PARAMÈTRES DE GÉNÉRATION SUGGÉRÉS :
- *    {
- *      max_new_tokens: 150,
- *      temperature: 0.7,
- *      top_k: 50,
- *      top_p: 0.9,
- *      do_sample: true
- *    }
- *
- * 5. GESTION ERREURS :
- *    - Timeout après 15 secondes
- *    - Fallback vers rules-engine si échec
- *    - Logger toutes les erreurs
- *
- * 6. OPTIMISATIONS :
- *    - Cache les embeddings si possible
- *    - Limiter historique à 10 derniers messages max
- *    - Tronquer contexte si trop long (> 1024 tokens)
- *
- * 7. TESTS À FAIRE :
- *    - Chargement du modèle
- *    - Génération simple
- *    - Génération avec historique
- *    - Gestion timeout
- *    - Gestion erreurs réseau
- */

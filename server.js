@@ -256,11 +256,14 @@ app.get('/ai/status', (req, res) => {
 
         res.json({
             status: 'ok',
-            ai: {
-                backend: backendStatus,
-                fallback: fallbackStats,
-                logs: logStats
-            },
+            backend: backendStatus,
+            fallback: fallbackStats,
+            // Flatten log stats pour faciliter l'accès
+            totalRequests: logStats.totalRequests || 0,
+            successRate: logStats.successRate || 0,
+            avgResponseTime: logStats.avgResponseTime || 0,
+            lastHourRequests: logStats.lastHourRequests || 0,
+            logs: logStats,
             uptime: process.uptime(),
             timestamp: new Date().toISOString()
         });
@@ -283,7 +286,7 @@ app.get('/ai/model-info', (req, res) => {
         const recommendedVariant = getRecommendedVariant();
 
         res.json({
-            model: modelInfo,
+            ...modelInfo,
             recommended: recommendedVariant
         });
     } catch (error) {
@@ -307,9 +310,9 @@ app.get('/ai/logs', (req, res) => {
         const logs = getRecentLogs(type, limit);
 
         res.json({
+            ...logs,
             type,
-            limit,
-            logs
+            limit
         });
     } catch (error) {
         console.error('[AI Logs] Erreur:', error);
@@ -351,10 +354,10 @@ app.post('/ai/logs/export', (req, res) => {
  * Statut backend général (rétrocompatible Phase 1)
  */
 app.get('/api/status', (req, res) => {
-    const status = getBackendStatus();
+    const backendStatus = getBackendStatus();
     res.json({
-        status: 'ok',
-        backend: status,
+        status: 'online',
+        backend: backendStatus,
         uptime: process.uptime(),
         timestamp: new Date().toISOString()
     });

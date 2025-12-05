@@ -24,7 +24,10 @@ const elements = {
   typingIndicator: null,
   statusBadge: null,
   statusIndicator: null,
-  statusText: null
+  statusText: null,
+  modelLoading: null,
+  modelProgressFill: null,
+  modelProgressText: null
 };
 
 /**
@@ -48,6 +51,9 @@ export function initUI() {
   elements.statusBadge = document.getElementById('status-badge');
   elements.statusIndicator = document.getElementById('status-indicator');
   elements.statusText = document.getElementById('status-text');
+  elements.modelLoading = document.getElementById('model-loading');
+  elements.modelProgressFill = document.getElementById('model-progress-fill');
+  elements.modelProgressText = document.getElementById('model-progress-text');
 
   // Vérifier que tous les éléments existent
   const missingElements = Object.entries(elements)
@@ -307,6 +313,36 @@ export function showError(errorMessage) {
   };
 
   addMessage(errorMsg);
+}
+
+/**
+ * Affiche l'indicateur de chargement du modèle
+ */
+export function showModelLoading() {
+  if (elements.modelLoading) {
+    elements.modelLoading.style.display = 'flex';
+  }
+}
+
+/**
+ * Cache l'indicateur de chargement du modèle
+ */
+export function hideModelLoading() {
+  if (elements.modelLoading) {
+    elements.modelLoading.style.display = 'none';
+  }
+}
+
+/**
+ * Met à jour la progression du chargement du modèle
+ * @param {number} progress - Pourcentage de progression (0-100)
+ */
+export function updateModelLoadingProgress(progress) {
+  if (elements.modelProgressFill && elements.modelProgressText) {
+    const percent = Math.min(100, Math.max(0, progress));
+    elements.modelProgressFill.style.width = `${percent}%`;
+    elements.modelProgressText.textContent = `${percent}%`;
+  }
 }
 
 /**
