@@ -5,13 +5,22 @@
   "type": "module",
   "scripts": {
     "dev": "npx serve . -p 3000 --cors",
-    "start": "npx serve . -p 3000 --cors"
+    "start": "npx serve . -p 3000 --cors",
+    "backend": "node server.js"
   },
-  "keywords": ["chatbot", "ia", "mauritanie", "services-publics", "offline-first"],
+  "keywords": [
+    "chatbot",
+    "ia",
+    "mauritanie",
+    "services-publics",
+    "offline-first"
+  ],
   "author": "Équipe NDI2025",
   "license": "MIT",
   "dependencies": {
-    "dexie": "^4.0.11"
+    "cors": "^2.8.5",
+    "dexie": "^4.0.11",
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "serve": "^14.2.4"

@@ -23,7 +23,7 @@ import * as UI from './ui/chat-ui.js';
 const CONFIG = {
   MAX_HISTORY_MESSAGES: 30,  // Nombre de messages à charger au démarrage
   AI_CONTEXT_MESSAGES: 10,   // Historique envoyé à l'IA
-  ENABLE_AI: false,          // Phase 1 : IA désactivée, Phase 2 : true
+  ENABLE_AI: true,           // Phase 1 Merge : IA activée (backend API)
   WELCOME_MESSAGE: true      // Afficher message de bienvenue
 };
 

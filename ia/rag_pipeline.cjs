@@ -34,7 +34,7 @@
  * @param {FAQEntry[]} params.faqSnippets
  * @returns {string}
  */
-export function buildPromptFromContext({ question, language, kbSnippets, faqSnippets }) {
+function buildPromptFromContext({ question, language, kbSnippets, faqSnippets }) {
     // Cette fonction sera connectée au module de prompting en Phase 3.
     // Pour l'instant, elle retourne une chaîne simple.
     return `[STUB] Prompt pour "${question}" (${language}) avec ${kbSnippets.length} KB et ${faqSnippets.length} FAQ.`;
@@ -45,14 +45,19 @@ export function buildPromptFromContext({ question, language, kbSnippets, faqSnip
  * @param {string} question
  * @returns {Promise<{kbSnippets: KBEntry[], faqSnippets: FAQEntry[]}>}
  */
-export async function selectRagContext(question) {
+async function selectRagContext(question) {
     // TODO: Phase 3 - Implémenter la recherche vectorielle (embedding + similarity search).
     // Pour l'instant, retourne des listes vides ou des documents fictifs.
-
+    
     console.log(`[RAG Stub] Recherche de contexte pour : "${question}"`);
-
+    
     return {
         kbSnippets: [],
         faqSnippets: []
     };
 }
+
+module.exports = {
+    buildPromptFromContext,
+    selectRagContext
+};

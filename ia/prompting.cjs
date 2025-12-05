@@ -2,7 +2,7 @@
  * Template système FR
  * @returns {string}
  */
-export function buildSystemPromptFR() {
+function buildSystemPromptFR() {
     return "Tu es un assistant pour les services publics mauritaniens. Tu réponds en français de façon claire et concise.";
 }
 
@@ -10,17 +10,17 @@ export function buildSystemPromptFR() {
  * Template système AR
  * @returns {string}
  */
-export function buildSystemPromptAR() {
+function buildSystemPromptAR() {
     return "أنت مساعد للخدمات العامة الموريتانية. تجيب باللغة العربية بوضوح وإيجاز.";
 }
 
 /**
  * Formate le contexte pour le prompt.
- * @param {Array} kbSnippets
- * @param {Array} faqSnippets
+ * @param {Array} kbSnippets 
+ * @param {Array} faqSnippets 
  * @returns {string}
  */
-export function formatContext(kbSnippets, faqSnippets) {
+function formatContext(kbSnippets, faqSnippets) {
     let contextParts = [];
 
     if (kbSnippets && kbSnippets.length > 0) {
@@ -50,11 +50,18 @@ export function formatContext(kbSnippets, faqSnippets) {
  * @param {Array} params.faqSnippets
  * @returns {string}
  */
-export function buildPrompt({ question, language, kbSnippets, faqSnippets }) {
+function buildPrompt({ question, language, kbSnippets, faqSnippets }) {
     const system = language === 'ar' ? buildSystemPromptAR() : buildSystemPromptFR();
     const context = formatContext(kbSnippets, faqSnippets);
-
+    
     const contextSection = context ? `\n\nContexte:\n${context}` : "";
-
+    
     return `${system}${contextSection}\n\nQuestion:\n${question}\n\nRéponds dans la langue ${language}.`;
 }
+
+module.exports = {
+    buildSystemPromptFR,
+    buildSystemPromptAR,
+    formatContext,
+    buildPrompt
+};

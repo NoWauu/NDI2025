@@ -1,13 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const fs = require('fs');
+const path = require('path');
 
 /**
  * Valide si un objet KBEntry a tous les champs requis.
- * @param {Object} entry
+ * @param {Object} entry 
  * @returns {boolean}
  */
 function validateKBEntry(entry) {
@@ -17,12 +13,20 @@ function validateKBEntry(entry) {
 
 /**
  * Valide si un objet FAQEntry a tous les champs requis.
- * @param {Object} entry
+ * @param {Object} entry 
  * @returns {boolean}
  */
 function validateFAQEntry(entry) {
-    const required = ['id', 'question', 'answer', 'tags', 'category'];
-    return required.every(field => field in entry) ||
+    const required = ['id', 'question', 'answer', 'tags', 'category']; // answer generic for loaded file
+    // Note: The user spec had answer_fr/answer_ar in one file in the prompt example, 
+    // but then asked for separate files data/faq_fr_rag.json and data/faq_ar_rag.json.
+    // I implemented separate files with 'answer' field. 
+    // If the user meant a single structure with both languages, I should adapt.
+    // Looking at the prompt: "Définir un format JSON pour la FAQ FR/AR... { answer_fr: ..., answer_ar: ... }"
+    // BUT THEN: "Générer des fichiers data/faq_fr_rag.json, data/faq_ar_rag.json"
+    // This implies split files. I will stick to 'answer' in split files or check if I should use specific keys.
+    // Let's support 'answer' or 'answer_fr'/'answer_ar'.
+    return required.every(field => field in entry) || 
            (entry.id && entry.question && (entry.answer_fr || entry.answer_ar) && entry.tags && entry.category);
 }
 
@@ -36,7 +40,7 @@ function loadJSON(filePath) {
     }
 }
 
-export function loadKB(filePath) {
+function loadKB(filePath) {
     const data = loadJSON(filePath);
     const valid = data.filter(validateKBEntry);
     if (valid.length < data.length) {
@@ -45,7 +49,7 @@ export function loadKB(filePath) {
     return valid;
 }
 
-export function loadFAQ(filePath) {
+function loadFAQ(filePath) {
     const data = loadJSON(filePath);
     const valid = data.filter(validateFAQEntry);
     if (valid.length < data.length) {
@@ -54,4 +58,9 @@ export function loadFAQ(filePath) {
     return valid;
 }
 
-export { validateKBEntry, validateFAQEntry };
+module.exports = {
+    loadKB,
+    loadFAQ,
+    validateKBEntry,
+    validateFAQEntry
+};
