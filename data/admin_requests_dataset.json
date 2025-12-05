@@ -1,0 +1,1602 @@
+[
+  {
+    "input": "Renouvellement conduire",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "j'ai besoin de judiciaire pour mon dossier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Puis-je avoir justice rapidement ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "quel est le site pour casier ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "je dois refaire autre",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "J'ai besoin de conduire pour mon dossier",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Prix pour immatriculation ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "pièce s'il vous plait",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "c'est quoi la procédure pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "casier s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "aide s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Comment faire pour pièce ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "c'est quoi la procédure pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Mon identité est expiré",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "permis s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Comment télécharger b3 ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "voyage s'il vous plait",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "délai pour obtenir autre ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "aidez-moi pour carte svp",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "aidez-moi pour certificat svp",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Comment télécharger naissance ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Mon conduire est expiré",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "il me faut auto-école, comment faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "mon résidence est expiré",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "quel est le site pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "acte s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Il me faut permis, comment faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Je dois refaire aide",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "il me faut conduire, comment faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "C'est quoi la procédure pour identité ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "aide s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "véhicule s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Aidez-moi pour visa svp",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "comment faire pour bonjour ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "comment faire pour justice ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "mon driver est expiré",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "bonjour s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Comment faire pour immatriculation ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "driver s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "puis-je avoir plaque rapidement ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "renouvellement civil",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Puis-je avoir voiture rapidement ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Prix pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "comment faire pour carte ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "renouvellement international",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "renouvellement carte",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Quel est le site pour acte ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "je veux obtenir passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "délai pour obtenir auto-école ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "mon identité est expiré",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Aidez-moi pour extrait svp",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "j'ai besoin de passeport pour mon dossier",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "C'est urgent pour plaque",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Délai pour obtenir habite ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "b3 s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Est-ce possible d'avoir auto-école en ligne ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "acte s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "véhicule s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "j'ai besoin de extrait pour mon dossier",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Comment télécharger carte ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Demande de passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "quel est le site pour passeport ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Comment faire pour carte ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "salut s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "comment faire pour casier ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Délai pour obtenir permis ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "c'est quoi la procédure pour habite ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Mon permis est expiré",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Comment télécharger casier ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Demande de acte",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "visa s'il vous plait",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Il me faut permis, comment faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "immatriculation perdu, que faire ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "je veux obtenir passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "bonjour s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "renouvellement driver",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Est-ce possible d'avoir habite en ligne ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Prix pour auto-école ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Est-ce possible d'avoir auto-école en ligne ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Renouvellement extrait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Où aller pour autre ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "certificat s'il vous plait",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "info s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Renouvellement habite",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Je veux obtenir conduire",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "civil s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "driver perdu, que faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Je cherche des infos sur passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "mon naissance est expiré",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "habite perdu, que faire ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "mon acte est expiré",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "puis-je avoir passeport rapidement ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "c'est urgent pour habite",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "il me faut salut, comment faire ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "où aller pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "mon naissance est expiré",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "extrait s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "je dois refaire voyage",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "carte grise s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "auto-école s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Délai pour obtenir autre ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "carte grise s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Quel est le site pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "renouvellement bonjour",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "J'ai besoin de permis pour mon dossier",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "je veux obtenir casier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "aidez-moi pour cni svp",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "renouvellement domicile",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Renouvellement casier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Est-ce possible d'avoir carte grise en ligne ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "je dois refaire salut",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "aidez-moi pour info svp",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Est-ce possible d'avoir certificat en ligne ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "aide s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "justice s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Je veux obtenir civil",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "cni s'il vous plait",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "c'est quoi la procédure pour cni ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "comment faire pour judiciaire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "demande de identité",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "je veux obtenir voiture",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Puis-je avoir visa rapidement ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "auto-école s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Comment télécharger info ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Renouvellement carte grise",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Quel est le site pour habite ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Je dois refaire plaque",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Comment télécharger certificat ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Demande de justice",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "judiciaire s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "résidence perdu, que faire ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "visa perdu, que faire ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Renouvellement certificat",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "où aller pour habite ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "je cherche des infos sur civil",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Renouvellement résidence",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Quel est le site pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "demande de résidence",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Puis-je avoir voyage rapidement ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Demande de passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Où aller pour b3 ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "C'est quoi la procédure pour pièce ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "c'est quoi la procédure pour bonjour ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "justice s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "je dois refaire visa",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "résidence s'il vous plait",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "délai pour obtenir permis ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "est-ce possible d'avoir cni en ligne ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Aidez-moi pour résidence svp",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Il me faut judiciaire, comment faire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "naissance s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "véhicule s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "immatriculation s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "je dois refaire extrait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "il me faut pièce, comment faire ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "j'ai besoin de domicile pour mon dossier",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "habite s'il vous plait",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "je veux obtenir aide",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "délai pour obtenir extrait ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "naissance s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "renouvellement naissance",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "voiture s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "conduire perdu, que faire ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "civil s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "comment télécharger identité ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "extrait s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Je dois refaire cni",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "comment télécharger cni ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Puis-je avoir justice rapidement ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "mon plaque est expiré",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "C'est quoi la procédure pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "J'ai besoin de bonjour pour mon dossier",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Je veux obtenir certificat",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "C'est urgent pour civil",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "pièce s'il vous plait",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Quel est le site pour driver ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "permis s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "permis s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "j'ai besoin de justice pour mon dossier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Délai pour obtenir judiciaire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "conduire s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Je cherche des infos sur permis",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "c'est quoi la procédure pour voiture ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Prix pour domicile ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "J'ai besoin de habite pour mon dossier",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "j'ai besoin de judiciaire pour mon dossier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "comment faire pour identifiant ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "mon bonjour est expiré",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Où aller pour identité ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "permis s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Quel est le site pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "J'ai besoin de international pour mon dossier",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "judiciaire perdu, que faire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "c'est urgent pour cni",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Délai pour obtenir b3 ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "aidez-moi pour naissance svp",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Je dois refaire immatriculation",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "certificat s'il vous plait",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "c'est quoi la procédure pour info ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "J'ai besoin de identifiant pour mon dossier",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "je veux obtenir carte grise",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "b3 s'il vous plait",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "délai pour obtenir visa ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "C'est urgent pour info",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Puis-je avoir judiciaire rapidement ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "véhicule perdu, que faire ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Je veux obtenir certificat",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Demande de aide",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Où aller pour auto-école ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "je veux obtenir auto-école",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Quel est le site pour passeport ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "je dois refaire habite",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "international perdu, que faire ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "aidez-moi pour carte svp",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "j'ai besoin de extrait pour mon dossier",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "autre s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Je veux obtenir domicile",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "C'est urgent pour pièce",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "je cherche des infos sur voiture",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Mon b3 est expiré",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "carte s'il vous plait",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "acte s'il vous plait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "prix pour bonjour ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "comment faire pour immatriculation ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Je cherche des infos sur pièce",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "C'est quoi la procédure pour résidence ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Quel est le site pour bonjour ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "je veux obtenir visa",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Puis-je avoir permis rapidement ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Est-ce possible d'avoir b3 en ligne ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "comment télécharger bonjour ?",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "salut s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Aidez-moi pour voyage svp",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "international perdu, que faire ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "véhicule s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "renouvellement autre",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "je veux obtenir aide",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "c'est urgent pour extrait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "il me faut casier, comment faire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "est-ce possible d'avoir international en ligne ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Renouvellement identifiant",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Est-ce possible d'avoir pièce en ligne ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Demande de immatriculation",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Délai pour obtenir judiciaire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Il me faut b3, comment faire ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "c'est quoi la procédure pour habite ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Renouvellement aide",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Quel est le site pour résidence ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Je dois refaire visa",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "résidence s'il vous plait",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "c'est urgent pour casier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Renouvellement bonjour",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "quel est le site pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "c'est urgent pour naissance",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "quel est le site pour permis ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "identité perdu, que faire ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "délai pour obtenir identifiant ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "renouvellement permis",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Puis-je avoir carte grise rapidement ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Délai pour obtenir certificat ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "c'est quoi la procédure pour identité ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "je veux obtenir identifiant",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Comment faire pour passeport ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "info s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Délai pour obtenir b3 ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Prix pour auto-école ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "je cherche des infos sur casier",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "il me faut extrait, comment faire ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Comment télécharger passeport ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Aidez-moi pour salut svp",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "Aidez-moi pour immatriculation svp",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Demande de identité",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "immatriculation perdu, que faire ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Je veux obtenir judiciaire",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "je cherche des infos sur naissance",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "je veux obtenir voiture",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Délai pour obtenir civil ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Comment télécharger casier ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "renouvellement salut",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "comment faire pour carte grise ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "est-ce possible d'avoir auto-école en ligne ?",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "demande de naissance",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "c'est urgent pour habite",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "j'ai besoin de visa pour mon dossier",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "voiture s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "Aidez-moi pour pièce svp",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Je cherche des infos sur b3",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Aidez-moi pour judiciaire svp",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "conduire s'il vous plait",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "délai pour obtenir certificat ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "comment télécharger visa ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "prix pour b3 ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Je veux obtenir driver",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "Délai pour obtenir justice ?",
+    "label": "casier_judiciaire",
+    "output": "Votre extrait de casier judiciaire peut être demandé auprès du Ministère de la Justice : https://www.justice.gov.mr/casier"
+  },
+  {
+    "input": "Demande de permis",
+    "label": "permis_conduire",
+    "output": "Les démarches pour le permis de conduire (examen ou renouvellement) sont détaillées ici : https://www.transports.gov.mr/permis"
+  },
+  {
+    "input": "visa s'il vous plait",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "il me faut certificat, comment faire ?",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Je veux obtenir résidence",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "Je cherche des infos sur civil",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Comment faire pour naissance ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "info s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "C'est urgent pour identifiant",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "bonjour s'il vous plait",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "véhicule s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "immatriculation s'il vous plait",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "comment télécharger véhicule ?",
+    "label": "immatriculation",
+    "output": "Pour l'immatriculation de votre véhicule (carte grise), consultez la procédure ici : https://www.transports.gov.mr/carte-grise"
+  },
+  {
+    "input": "C'est urgent pour bonjour",
+    "label": "autre",
+    "output": "Je suis un assistant administratif. Je peux vous aider pour vos papiers (CNI, Passeport, etc.). Posez-moi votre question !"
+  },
+  {
+    "input": "visa s'il vous plait",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "demande de extrait",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "j'ai besoin de domicile pour mon dossier",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "je dois refaire passeport",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "naissance perdu, que faire ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "C'est quoi la procédure pour identifiant ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  },
+  {
+    "input": "Prix pour naissance ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "comment faire pour international ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "visa perdu, que faire ?",
+    "label": "passeport",
+    "output": "La demande de passeport biométrique s'effectue en ligne. Commencez votre pré-enrôlement ici : https://www.etatcivil.gov.mr/passeport"
+  },
+  {
+    "input": "Est-ce possible d'avoir naissance en ligne ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Aidez-moi pour certificat svp",
+    "label": "certificat_residence",
+    "output": "Le certificat de résidence est délivré par la commune ou le commissariat. Plus d'infos : https://www.interieur.gov.mr/residence"
+  },
+  {
+    "input": "délai pour obtenir naissance ?",
+    "label": "acte_naissance",
+    "output": "Vous pouvez demander un extrait d'acte de naissance numérisé directement sur ce lien : https://www.etatcivil.gov.mr/naissance"
+  },
+  {
+    "input": "Comment faire pour pièce ?",
+    "label": "carte_identite",
+    "output": "Pour obtenir ou renouveler votre Carte Nationale d'Identité, rendez-vous sur le portail de l'Agence Nationale du Registre des Populations : https://www.etatcivil.gov.mr/cni"
+  }
+]
